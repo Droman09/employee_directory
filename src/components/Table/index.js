@@ -3,7 +3,9 @@ import API from "/Users/davidroman/Desktop/directory/src/utils/API.js";
 
 class Table extends Component {
     state = {
-        results: []
+        results: [],
+        error : ""
+        
     }
 
     componentDidMount(){
