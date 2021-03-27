@@ -1,7 +1,8 @@
 import axios from "axios";
-
+// eslint-disable-next-line
 export default {
     getRandomEmp: function() {
-        return axios.get("https://randomuser.me/api/")
+        const response =  axios.get("https://randomuser.me/api/?results=10")
+        console.log(response);
     }
 };

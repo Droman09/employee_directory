@@ -5,6 +5,7 @@ import Directory from "./pages/Directory";
 import Search from "./pages/Search";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Table from "./components/Table"
 
 function App() {
     return (
@@ -15,7 +16,7 @@ function App() {
             <Route  exact path="/main" component= {Main} />
             <Route  exact path="/directory" component= {Directory} />
             <Route  exact path="/search" component= {Search} />
-
+            <Table />
             <Footer />
         </div>
         </Router>
