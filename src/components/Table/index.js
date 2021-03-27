@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "/Users/davidroman/Desktop/directory/src/utils/API.js";
+import Container from "../Container";
 
 class Table extends Component {
     state = {
@@ -24,9 +25,22 @@ class Table extends Component {
 
     render() {
         return (
-            <div>
-                <h1>Hello</h1>
-            </div>
+            <Container>
+                <table>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Age</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                    </tr>
+                    {this.state.results.map(info => {
+                       return <tr>
+                            <th>{info.name.first}</th>
+                        </tr>
+                    })}
+                </table>
+            </Container>
         )
     }
 
