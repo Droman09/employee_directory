@@ -76,13 +76,12 @@ class Table extends Component {
         this.setState({ results: sortedEmployee })
     }
 
-
     render() {
         return (
             <Container>
                 <table>
                     <tr>
-                        <th>First Name<button onClick={this.sortByName}></button></th>
+                        <th onClick={this.sortByName}>First Name</th>
                         <th>Last Name</th>
                         <th>Age</th>
                         <th>Phone Number</th>
