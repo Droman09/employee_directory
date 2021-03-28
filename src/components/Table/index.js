@@ -70,9 +70,7 @@ class Table extends Component {
             sortedEmployee.reverse()
             this.setState({ currentSort: "up" })
         } else {
-            this.setState({
-                sortOrder: "down"
-            })
+            this.setState({ currentSort: "down" })
         }
         this.setState({ results: sortedEmployee })
     }
