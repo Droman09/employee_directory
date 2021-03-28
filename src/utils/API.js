@@ -5,5 +5,10 @@ export default {
         const response =  axios.get("https://randomuser.me/api/?results=10")
         console.log(response);
         return response
+    },
+    getSingleEmp: function() {
+        const response =  axios.get("https://randomuser.me/api/?results=1")
+        console.log(response);
+        return response
     }
 };
