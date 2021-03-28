@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import API from "/Users/davidroman/Desktop/directory/src/utils/API.js";
 import Container from "../Container";
+import "./style.css";
 
 // const sortTypes = {
 //     up: {
@@ -79,7 +80,7 @@ class Table extends Component {
     render() {
         return (
             <Container>
-                <table>
+                <table className="styleTable">
                     <tr>
                         <th onClick={this.sortByName}>First Name</th>
                         <th>Last Name</th>

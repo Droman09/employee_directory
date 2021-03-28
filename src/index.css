@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body,
+  #root,
+  #root > div,
+  div[data-reactroot] {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  h1{
+    text-align: center;
+  }
+
+  body {
+    background: #ff5f6d;
+    background: -webkit-linear-gradient(to right, #ff5f6d, #ffc371);
+    background: linear-gradient(to right, #ff5f6d, #ffc371);
+    min-height: 100vh;
+  }
+  
