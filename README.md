@@ -29,6 +29,9 @@ The user should be able to:
 ## Usage
 ![GIF]() 
 
+On the main page, you'll have a table filled with employee's information. To sort by first name, click on the "First Name" section 
+
+On the search page, you'll have two buttons categories, one for male and one for female. Click on the button and it'll output a table of that specific category.
 
 
 ## Technologies
