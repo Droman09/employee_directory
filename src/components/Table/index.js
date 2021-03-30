@@ -19,6 +19,18 @@ import "./style.css";
 // };
 
 
+// onSortChange = () => {
+//     const { currentSort } = this.state;
+//     let nextSort;
+//     if (currentSort === "up") nextSort = "down";
+//     else if (currentSort === "down") nextSort = "up";
+//     else if (currentSort === "default") nextSort = "down";
+
+//     this.setState({
+//         currentSort: nextSort
+//     })
+
+// }
 
 class Table extends Component {
     state = {
@@ -42,18 +54,6 @@ class Table extends Component {
     }
 
 
-    // onSortChange = () => {
-    //     const { currentSort } = this.state;
-    //     let nextSort;
-    //     if (currentSort === "up") nextSort = "down";
-    //     else if (currentSort === "down") nextSort = "up";
-    //     else if (currentSort === "default") nextSort = "down";
-
-    //     this.setState({
-    //         currentSort: nextSort
-    //     })
-
-    // }
 
     sortByName = () => {
         const sortedEmployee = this.state.results.sort((a, b) => {
