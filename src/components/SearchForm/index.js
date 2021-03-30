@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import API from "/Users/davidroman/Desktop/directory/src/utils/API.js";
+import Container from "../Container";
 import "./style.css";
-
-
 
 class SearchForm extends Component {
   state = {
@@ -52,7 +51,7 @@ class SearchForm extends Component {
 
   render() {
     return (
-      <>
+      <Container>
         <form>
           <div className="form-group">
             <br />
@@ -64,9 +63,10 @@ class SearchForm extends Component {
         </button>
           </div>
         </form>
+
         <table className="styleTable">
           <tr>
-            <th>First Name</th>
+            <th onClick={this.sortByName}>First Name</th>
             <th>Last Name</th>
             <th>Age</th>
             <th>Phone Number</th>
@@ -82,7 +82,7 @@ class SearchForm extends Component {
             </tr>
           })}
         </table>
-      </>
+      </Container>
     );
   }
 }
