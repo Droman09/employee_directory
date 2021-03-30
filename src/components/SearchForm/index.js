@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import API from "/Users/davidroman/Desktop/directory/src/utils/API.js";
+import "./style.css";
 
 
 
 class SearchForm extends Component {
   state = {
     female: [],
+    male: [],
+    result: [],
     error: ""
   }
 
@@ -13,7 +16,6 @@ class SearchForm extends Component {
     this.loadFemaleEmp()
     this.loadMaleEmp()
   }
-
 
   loadFemaleEmp = () => {
     API.getFemaleEmp()
@@ -33,7 +35,20 @@ class SearchForm extends Component {
       .catch(err => console.log(err))
   }
 
-
+  renderGender = event => {
+    event.preventDefault();
+    const id = event.target.id
+    if (id === "male") {
+      const maleInput = this.state.male
+      console.log(maleInput)
+      return this.setState({ result: maleInput })
+    } else if (id === "female") {
+      const femaleInput = this.state.female;
+      return this.setState({ result: femaleInput })
+    } else {
+      return
+    }
+  }
 
   render() {
     return (
@@ -41,10 +56,10 @@ class SearchForm extends Component {
         <form>
           <div className="form-group">
             <br />
-            <button className="btn btn-dark">
+            <button onClick={this.renderGender} id="male" className="btn btn-dark male">
               Male
         </button>
-            <button className="btn btn-dark">
+            <button onClick={this.renderGender} id="female" className="btn btn-dark female">
               Female
         </button>
           </div>
@@ -57,9 +72,15 @@ class SearchForm extends Component {
             <th>Phone Number</th>
             <th>Email</th>
           </tr>
-          <tr>
-            <th></th>
-          </tr>
+          {this.state.result.map(info => {
+            return <tr>
+              <th>{info.name.first}</th>
+              <th>{info.name.last}</th>
+              <th>{info.dob.age}</th>
+              <th>{info.phone}</th>
+              <th>{info.email}</th>
+            </tr>
+          })}
         </table>
       </>
     );

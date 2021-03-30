@@ -7,12 +7,12 @@ export default {
         return response
     },
     getFemaleEmp: function() {
-        const response =  axios.get("https://randomuser.me/api/?results=10&gender=female")
+        const response =  axios.get("https://randomuser.me/api/?results=10&gender=female&nat=us,dk,fr,gb&")
         console.log(response);
         return response
     },
     getMaleEmp: function() {
-        const response =  axios.get("https://randomuser.me/api/?results=10&gender=male")
+        const response =  axios.get("https://randomuser.me/api/?results=10&gender=male&nat=us,dk,fr,gb&")
         console.log(response);
         return response
     }

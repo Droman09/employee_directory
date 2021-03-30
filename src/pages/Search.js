@@ -1,3 +1,4 @@
+// eslint-disable-next-line 
 import React from "react";
 import SearchForm from "../components/SearchForm";
 
@@ -5,7 +6,7 @@ import SearchForm from "../components/SearchForm";
 function Search(){
     return( 
         <div>
-            <h1>Search</h1>
+            <h1>Search </h1>
             <SearchForm />
         </div>
     )
