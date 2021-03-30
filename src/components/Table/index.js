@@ -66,6 +66,7 @@ class Table extends Component {
             return 0
 
         })
+        
         if (this.state.currentSort === "down") {
             sortedEmployee.reverse()
             this.setState({ currentSort: "up" })
